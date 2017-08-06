@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+*,
+*::before,
+*::after{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    max-width: 1000px;
+    margin: auto;
+    border: 0;
+    font-family:'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: small;
+    font-style: normal;
+    font-weight: 700;
+    color: #565a5c;
+    line-height: 1.43;
+
+    overflow-x: hidden !important;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+
+img {
+    border: 0;
+}
+
+/*
+ * Menu styling
+*/
+.card {
+    float: left;
+    position: relative;
+    width: 200px;
+    text-align: center;
+    margin: 1em;
+    margin-left: 5em;
+    height: auto;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.4);
+    font-family: arial;
+    padding-bottom: 1em;
+    background-color: rgba(22, 26, 28, 0.1);
+   
+}
+.card img {
+    width: 100%;
+    height: 50%;
+}
+.card h1{
+    font-size: 14px;
+}
+.card p{
+    font-size: 12px;
+}
+.wrapp {
+    padding: 0 10px;
+}
+.wrapp::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/************************
+    Menu button styling 
+*************************/
+.wrap {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #333;
+}
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 3px;
+    background-color: #eee;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+    -moz-transform: rotate(-45deg) translate(-5px, 6px);
+    -ms-transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-5px, 6px);    
+}
+.change .bar2 {
+    opacity: 0;    
+}
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    -moz-transform: rotate(45deg) translate(6px, -8px);
+    -ms-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);    
+}
+
+
+/*********************
+    sidebar styling 
+**********************/
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x : hidden;
+    transition: 1s;
+    margin-top: 48px;
+    opacity: .825;
+    
+}
+.sidebar a {
+    padding: 1em .5em 1em 2em;
+    text-decoration: none;
+    color: white;
+    display: block;
+    transition: .7s;
+    font-size: 12px;
+    width: 200px;
+}
+.sidebar a:hover, .offcanvas a:focus {
+    color: rgb(63, 191, 191);
+}
+.sidebar a:hover:not(.active){       
+    color: rgb(63, 191, 191); 
+}
+.sidebar .active{ 
+    color: rgb(63, 191, 191); 
+}
+.sidebar .material-icons{
+    font-size: 24px;
+    color: #eaeaea;
+    display: table-cell;
+    width: 60px;
+    height: 36px;
+    text-align: center;
+    vertical-align: middle;
+}
+.sidebar .text {
+    padding-left: 1em;
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    width: 190px;
+}
+
+/*  End sidebar  */
+
+/*********************
+    topnav styling 
+**********************/
+
+.topnav{
+    display: block;
+    z-index: 9998;
+    position: fixed;
+    overflow: hidden;
+    height: 60px;
+    margin: 0;
+    overflow: hidden;
+    background-color: #333;
+    padding-top: .5em;
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    clear: both;
+}
+.topnav ul{
+    width: 1000px;
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    text-transform: uppercase;
+}
+.topnav li{
+    float: left;
+}
+.topnav li:last-child{
+
+}
+.topnav .right{
+    float: right;
+}
+.topnav a{
+    color: white;
+    display: block;
+    text-align: center;
+    padding:0.875em 1em;
+    text-decoration: none;
+}
+.topnav a:hover:not(.active){       
+    color: rgb(63, 191, 191); 
+}
+.topnav .active{ 
+    color: rgb(63, 191, 191); 
+}
+
+.topnav .toc.menu{
+    display: none;
+}
+
+/*********************
+    Main Body styling 
+**********************/
+.container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 0.5em;
+}
+.wrapper {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    margin-bottom: 5em;
+    clear: both;
+}
+
+.container.title {
+    position: relative;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.1em 0.5em;
+}
+.container.title-bar {
+    margin-top: 55px;
+    margin-bottom: 1em;
+    padding: 0.5em 1em;
+    border-bottom: 1px solid #aaa;
+    
+}
+.container.title-bar h2 {
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+.main-title {
+    height: 55vh;
+    background-image: url("images/bamboo_x.jpg");
+    background-size: cover;
+    background-position: 25% 25%;
+    background-repeat: no-repeat;
+}
+.banner {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    opacity: .80;
+    padding: 1.5em;
+    line-height: 1em;
+    text-transform: uppercase;
+    padding-left: 1em;
+}
+.banner h2 {
+    display: inline-flex;
+    color: rgba(28, 22, 22, 0.85);
+    font-weight: 500;
+    font-size: 26px;
+    padding-left: .5em;
+    line-height: 1em;
+}
+.banner p {
+    font-weight: 700;
+    font-size: 12px;
+    padding-left: 1em;
+    line-height: 2em;
+ }
+
+.sub-title a:hover:not(.active){       
+    opacity: .9; 
+}
+
+.content {
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: .25em 0 0 0;
+    clear: both;
+}
+.content h2{
+    font-size: 17px;
+    position: relative;
+    padding-bottom: .25em;
+}
+.content h2:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: .9em;
+    border-top: 1px solid #ccc;
+    padding: 0;
+    z-index: -1;
+    margin-left: 110px;
+}
+.project {
+    background-color: #fff;
+    padding-right: 20px;
+}
+.content p{
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: .5em;
+    margin-bottom:0; 
+    line-height: 2em;   
+}
+.graph {
+    width: auto;
+    display: flex;
+    position: relative;
+    clear: both;
+}
+.content .graph img, p {
+    padding-left: 0;
+    margin-left: 0;
+    float: left;
+}
+.content .short{
+    float: left;
+    display: inline-block;
+    width: 380px;
+}
+.content li {
+    font-weight: 400;
+    font-size: 12px;
+    padding: 0.3em 0 1.5em .5em;
+    margin-left: 25em;
+}
+.content .narrow li {
+    font-weight: 400;
+    font-size: 12px;
+    padding: 0.3em 0 1.5em .5em;
+    margin: 0.5em 0 .2em 0.1em;
+}
+.narrow {
+    padding-top: .5em;
+    clear: both;
+}
+.info {
+    width: 333px;
+    height: 271px;
+}
+.content .graph .modelXL {
+    width: 309px;
+    height: 170px;
+    margin-left: 5em;
+}
+.pellets {
+    width: 267px;
+    height: 269px;
+}
+.electric {
+    width: 309px;
+    height: 170px;
+}
+.sustain {
+    width: 316px;
+    height: 221px;
+}
+.graph .wide{
+    right: 0;
+    padding: 0 1em 0 9em;
+    text-align: justify;
+    line-height: 2em;
+    width:;
+}
+.graph .narrow {
+    right: 0;
+    padding: 0 1em 0 0;
+    text-align: justify;
+    line-height: 2em;
+}
+.graph .wide h4 {
+    font-size: 13px;
+    margin-bottom: 0;
+    line-height: 1em; 
+    padding: 1em 0 0 0;
+}
+.graph .wide p {
+    margin: 0.4em 0 1.5em 0;
+}
+.space {
+    margin-bottom: 2em;
+    padding-bottom: 2em;
+}
+
+
+ .footer {
+    font-size: 12px;
+    font-weight: 400;
+    color: #aaa;
+    padding-top: 1.5em;
+    margin-top: 2em;
+ }
+/*****************************************
+      Form styling on Join NSBE page
+*****************************************/
+.form .material-icons {
+    color: grey;
+}
+
+.form {
+    float: left;
+    object-position: center;
+    width: 550px;
+    margin: auto;
+    padding: 1em 1em ;
+    border: 0 1px 1px thin #eaeaea;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.7);
+    background: transparent;
+    opacity: .9; 
+    overflow: hidden; 
+}
+
+.form input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+.form input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+
+.form .joinbtn  :hover {
+    opacity: 0.6;
+}
+
+/*****************************************/
