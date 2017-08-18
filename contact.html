@@ -50,17 +50,17 @@
 	<div class="wrapper ">
         <div class="row">
     		<div class="form col-6">
-                <form method="post" name="contactForm" action="action_page.php">
+                <form action="https://formspree.io/your@email.com" method="POST">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" placeholder="Your name..">
 
                     <label for="email">Email</label>
-                    <input type="text" id="email" name="email" placeholder="Your email..">
+                    <input type="text" id="email" name="_replyto" placeholder="Your email..">
 
                     <label for="subject">Subject</label>
-                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                    <textarea id="subject" name="message" placeholder="Write something.." style="height:200px"></textarea>
 
-                    <input type="submit" value="Submit Form">
+                    <input type="submit" value="Send">
                 </form> 
 
                 <div class="contact col-5">
